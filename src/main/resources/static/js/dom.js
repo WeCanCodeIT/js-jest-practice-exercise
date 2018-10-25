@@ -2,6 +2,7 @@ function deleteCard(card) {
 	card.remove()
 }
 
+// Specific implementation of 'on' function
 function onCardCloseButton(cards) {
 	on(cards, 'click', event => {
 		if(event.target.classList.contains('closeButton')) {
@@ -10,6 +11,7 @@ function onCardCloseButton(cards) {
 	})
 }
 
+// Generic event listener factory
 function on(element, eventType, callback) {
 	element.addEventListener(eventType, callback)
 }
